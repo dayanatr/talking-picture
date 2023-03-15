@@ -59,7 +59,7 @@ export default function Header() {
             >
               <Link
                 onClick={getFavoriteMovies}
-                to='/favorites' reloadDocument={true}
+                to='/favorites'
                 style={{
                   color: currentPath === '/favorites' ? "white" : "#afafaf",
                   display: "flex",
@@ -76,7 +76,7 @@ export default function Header() {
                 Favorites
               </Link>
               <Link
-                to='/watch_later' reloadDocument={true}
+                to='/watch_later' 
                 onClick={getWatchMovies}
                 style={{
                   color: currentPath === '/watch_later' ? "white" : "#afafaf",
@@ -110,7 +110,7 @@ export default function Header() {
           )}
         </Row>
         <div className="mt-5 d-flex justify-content-center">
-          <Pagination getPageCount={getPageCount} />
+          <Pagination getPageCount={getPageCount} searchValue={searchValue} />
         </div>
       </Container>
     </>
