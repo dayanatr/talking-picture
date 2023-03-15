@@ -3,10 +3,10 @@ import ReactPaginate from "react-paginate";
 import { PictureContext } from '../service'
 import { useLocation } from "react-router-dom";
 
-export const Pagination = ({ getPageCount }) => {
+export const Pagination = ({ getPageCount,searchValue }) => {
     const params = useLocation();
     const currentPath = params.pathname;
-    const { searchValue, setCurrentPage, setSearchCurrentPage, setFavoriteCurrentPage, setWatchCurrentPage } = useContext(PictureContext)
+    const { setCurrentPage, setSearchCurrentPage, setFavoriteCurrentPage, setWatchCurrentPage } = useContext(PictureContext)
     const getCurrentPage = (e) => {
         if (searchValue !== "") {
             setSearchCurrentPage(e.selected + 1)
